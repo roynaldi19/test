@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">test</string>
+    <string name="angka_3">Angka 3</string>
+    <string name="angka_1">Angka 1</string>
 </resources>

@@ -15,15 +15,22 @@ class MainActivity : AppCompatActivity() {
         binding.btnUrutkan.setOnClickListener {
             val angka1 = binding.edt1.text.toString().toInt()
             val angka2 = binding.edt2.text.toString().toInt()
-//            val angka3 = binding.edt3.text.toString().toInt()
-//            val angka4 = binding.edt4.text.toString().toInt()
-//            val angka5 = binding.edt5.text.toString().toInt()
+            val angka3 = binding.edt3.text.toString().toInt()
+            val angka4 = binding.edt4.text.toString().toInt()
+            val angka5 = binding.edt5.text.toString().toInt()
 
-            if (angka1 < angka2){
-                binding.tvHasil.text = "$angka1, $angka2"
+            if (angka1 > angka2 && angka1 > angka3 && angka1 > angka4 && angka1 > angka5) {
+                binding.tvAngkaMaximal.text = "nilai maximal atau terbesar adalah $angka1"
 
-            } else{
-                binding.tvHasil.text = "$angka2, $angka1"
+            } else if (angka2 > angka1 && angka2 > angka3 && angka2 > angka4 && angka2 > angka5) {
+                binding.tvAngkaMaximal.text = "nilai maximal atau terbesar adalah $angka2"
+            } else if (angka3 > angka1 && angka3 > angka2 && angka3 > angka4 && angka3 > angka5) {
+                binding.tvAngkaMaximal.text = "nilai maximal atau terbesar adalah $angka3"
+            } else if (angka4 > angka1 && angka4 > angka2 && angka4 > angka3 && angka4 > angka5) {
+                binding.tvAngkaMaximal.text = "nilai maximal atau terbesar adalah $angka4"
+            } else {
+                binding.tvAngkaMaximal.text = "nilai maximal atau terbesar adalah $angka5"
+
             }
         }
     }
